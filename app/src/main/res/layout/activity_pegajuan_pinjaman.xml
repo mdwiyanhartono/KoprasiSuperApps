@@ -1,0 +1,859 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PegajuanPinjaman">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/contact_infromation"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/grey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title"
+                android:textColor="@color/black"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/required"
+                android:textColor="@color/red" />
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spiner1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/rounded_background_strokgrey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textColor="@color/black"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/required"
+                android:textColor="@color/red" />
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/first_name"
+            android:inputType="textPersonName"
+            android:textSize="12sp"
+            tools:ignore="Autofill" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/last_name"
+            android:inputType="textPersonName"
+            android:textSize="12sp"
+            tools:ignore="Autofill" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/birth_date"
+                android:textColor="@color/black"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/required"
+                android:textColor="@color/red" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tanggal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/rounded_background_strokgrey"
+                android:text="@string/birth_date"
+                android:paddingTop="10dp"
+                android:paddingStart="10dp"
+                android:onClick="tanggallahir"
+                android:textSize="12sp"
+                tools:ignore="Autofill" />
+        </LinearLayout>
+        <!-- <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:orientation="horizontal">-->
+
+        <!--            <Spinner-->
+        <!--                android:id="@+id/spiner1"-->
+        <!--                android:layout_width="0dp"-->
+        <!--                android:background="@drawable/rounded_background_strokgrey"-->
+        <!--                android:layout_height="40dp"-->
+        <!--                android:layout_weight="4" />-->
+        <!--&lt;!&ndash;            <EditText&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_width="0dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_weight="4"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:hint="@string/month"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:textSize="12sp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:inputType="text"&ndash;&gt;-->
+        <!--&lt;!&ndash;                tools:ignore="Autofill" />&ndash;&gt;-->
+
+        <!--            <Spinner-->
+        <!--                android:id="@+id/spiner2"-->
+        <!--                android:layout_width="0dp"-->
+        <!--                android:background="@drawable/rounded_background_strokgrey"-->
+        <!--                android:layout_height="40dp"-->
+        <!--                android:layout_weight="4" />-->
+        <!--&lt;!&ndash;            <EditText&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_width="0dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_weight="4"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:hint="@string/day"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:textSize="12sp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:inputType="text"&ndash;&gt;-->
+        <!--&lt;!&ndash;                tools:ignore="Autofill" />&ndash;&gt;-->
+
+        <!--            <EditText-->
+        <!--                android:layout_width="0dp"-->
+        <!--                android:layout_height="40dp"-->
+        <!--                android:layout_weight="4"-->
+        <!--                android:hint="@string/year"-->
+        <!--                android:textSize="12sp"-->
+        <!--                android:paddingStart="10dp"-->
+        <!--                android:background="@drawable/rounded_background_strokgrey"-->
+        <!--                android:inputType="number"-->
+        <!--                tools:ignore="Autofill" />-->
+        <!--&lt;!&ndash;            <Spinner&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:id="@+id/spiner3"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_width="0dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:background="@drawable/rounded_background_strokgrey"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_height="30dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_weight="4" />&ndash;&gt;-->
+        <!--        </LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/marital_status"
+                android:textColor="@color/black"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/required"
+                android:textColor="@color/red" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/signle"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/married"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/other"
+                android:textSize="12sp" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/e_ktp_number"
+                android:textColor="@color/black"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/required"
+                android:textColor="@color/red" />
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/_3xxxxxx"
+            android:inputType="number"
+            android:textSize="12sp"
+            tools:ignore="Autofill" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/e_mail"
+                android:textColor="@color/black"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/required"
+                android:textColor="@color/red" />
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/myname_example_com"
+            android:inputType="textEmailAddress"
+            android:textSize="12sp"
+            tools:ignore="Autofill" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/phone"
+                android:textColor="@color/black"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/required"
+                android:textColor="@color/red" />
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/_000_000_0000"
+            android:inputType="phone"
+            android:textSize="12sp"
+            tools:ignore="Autofill" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/address"
+                android:textColor="@color/black"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/required"
+                android:textColor="@color/red" />
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/street_address"
+            android:inputType="textMultiLine"
+            android:textSize="12sp"
+            tools:ignore="Autofill" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/street_address_line_2"
+            android:inputType="textMultiLine"
+            android:textSize="12sp"
+            tools:ignore="Autofill" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:hint="@string/city"
+                android:inputType="text"
+                android:textSize="12sp"
+                tools:ignore="Autofill" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:hint="@string/state_province"
+                android:inputType="text"
+                android:textSize="12sp"
+                tools:ignore="Autofill" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:hint="@string/postal_zip_code"
+                android:inputType="textPostalAddress"
+                android:textSize="12sp"
+                tools:ignore="Autofill" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/how_long_have_you_lived_in_your_given_address"
+                android:textColor="@color/black"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/required"
+                android:textColor="@color/red" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/_0_1_year"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/_1_2_years"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/_2_3_years"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/_3_4_years"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/_5_years"
+                android:textSize="12sp" />
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/employment_infromation"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/grey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/present_employer"
+                android:textColor="@color/black"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/required"
+                android:textColor="@color/red" />
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/present_employer"
+            android:inputType="textPersonName"
+            android:textSize="12sp"
+            tools:ignore="Autofill" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/occupation"
+                android:textColor="@color/black"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/required"
+                android:textColor="@color/red" />
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/occupation"
+            android:inputType="text"
+            android:textSize="12sp"
+            tools:ignore="Autofill" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/years_of_experience"
+                android:textColor="@color/black"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/required"
+                android:textColor="@color/red" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/_0_1_year"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/_1_2_years"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/_2_3_years"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/_3_4_years"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/_5_years"
+                android:textSize="12sp" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/gross_monthly_income"
+                android:textColor="@color/black"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/required"
+                android:textColor="@color/red" />
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/_15000"
+            android:inputType="number"
+            android:textSize="12sp"
+            tools:ignore="Autofill" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/monthly_rent_mortgage"
+                android:textColor="@color/black"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/required"
+                android:textColor="@color/red" />
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ex_0_for_no_rent_mortgage"
+            android:inputType="number"
+            android:textSize="12sp"
+            tools:ignore="Autofill,TooManyViews" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/down_payment_amount"
+                android:textColor="@color/black"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/required"
+                android:textColor="@color/red" />
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/_15000"
+            android:inputType="number"
+            android:textSize="12sp"
+            tools:ignore="Autofill" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/comments"
+                android:textColor="@color/black"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:textSize="12sp"
+            tools:ignore="Autofill,LabelFor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/interested_in_loan_products"
+                android:textColor="@color/black"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spiner4"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/rounded_background_strokgrey" />
+        <!--        <EditText-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:inputType="text"-->
+        <!--            android:textSize="12sp"-->
+        <!--            tools:ignore="Autofill,LabelFor" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:justificationMode="inter_word"
+                android:text="@string/i_authorize_prospective_credit_grantors_lending_leasing_companies_to_obtain_personal_and_credit_information_about_me_from_my_employer_and_credit_bureau_or_credit_reporting_agency_any_person_who_has_or_may_have_any_financial_dealing_with_me_or_from_any_references_i_have_provided_this_information_as_well_as_that_provided_by_me_in_the_application_will_be_referred_to_in_connection_with_this_lease_and_any_other_relationships_we_may_establish_from_time_to_time_any_personal_and_credit_information_obtained_may_be_disclosed_from_time_to_time_to_other_lenders_credit_bureaus_or_other_credit_reporting_agencies"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                tools:ignore="UnusedAttribute" />
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/yes"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/no"
+                android:textSize="12sp" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:justificationMode="inter_word"
+                android:text="@string/i_hereby_agree_that_the_information_given_is_true_accurate_and_complete_as_of_the_date_of_this_application_submission"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                tools:ignore="UnusedAttribute" />
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/yes"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/no"
+                android:textSize="12sp" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/take_your_picture"
+                android:textColor="@color/black"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/required"
+                android:textColor="@color/red" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/takephoto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="2"
+                android:elevation="10dp"
+                app:cardCornerRadius="10dp"
+                tools:ignore="UnusedAttribute">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/image"
+                    android:src="@drawable/addphoto" />
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/imageview"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_weight="10"
+                android:contentDescription="@string/image" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/grey" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/red"
+            android:shadowRadius="10"
+            android:text="@string/send_application_now"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            tools:ignore="UnusedAttribute" />
+    </LinearLayout>
+
+</ScrollView>
